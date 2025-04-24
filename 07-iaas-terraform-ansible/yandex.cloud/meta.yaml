@@ -1,0 +1,30 @@
+#cloud-config
+groups:
+  - admingroup: [root, sudo, adm, admin]
+  - cloud-users, www-data
+users:
+  - default
+  - name: ophil
+    groups: adm, sudo, www-data, systemd-journal, users, admin
+    expiredate: '2032-09-01'
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOoYBWDhockOhoBOJQmq0YCfIb37jC8lorvOqca3iAVB
+  - name: dev
+    groups: systemd-journal, docker
+    expiredate: '2032-09-01'
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOoYBWDhockOhoBOJQmq0YCfIb37jC8lorvOqca3iAVB
+runcmd:
+  - apt update
+  - apt upgrade -y
+packages:
+  - fail2ban
+  - dlocate
+  - python3-pip
+  - tree
+  - podman
+  - podman-compose
+  - podman-docker

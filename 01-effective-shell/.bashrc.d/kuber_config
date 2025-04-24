@@ -1,0 +1,2 @@
+export KUBECONFIG=$(echo ~/.kube/*.yaml|sed 's/ /:/g')
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

@@ -1,0 +1,38 @@
+# Some useful aliases.
+# /etc/profile: system-wide .profile file for bash(1).
+alias co="dict -d foldoc"
+alias df="df -Th"
+alias dir='/bin/ls -balF'
+alias dir='ls --color=auto --format=vertical';
+alias dk="docker"
+alias dr="docker stats --no-stream"
+alias ds="dirs"
+alias en="dict -d wn -d gcide"
+alias grep="grep --color=auto"
+alias ipa="ip -c -br a"
+alias jqp="jq 'paths|join(\".\")'"
+alias kdr='kubectl --dry-run=client -o yaml'
+alias ku="kubectl"
+alias lf='find -type f|xargs ls -l'
+alias lk="ls -lt|head"
+alias ll='/bin/ls --color=auto -alF'
+# alias ls='ls --color=auto ';
+# alias man="man -7"
+# alias mc="mc -duP"
+alias md=mkdir
+alias m="more"
+alias pdw='echo $PWD'
+alias po="podman"
+alias pp="pushd"
+alias pwd='echo $PWD'
+alias py="python"
+alias root='sudo bash --login'
+# alias rpm="rpm --dbpath /mnt/hda5/var/lib/rpm/"
+alias ru="dict -d mueller7accent"
+alias syst="systemctl status"
+alias texclean='rm -f *.toc *.aux *.log *.cp *.fn *.tp *.vr *.pg *.ky'
+alias tm='tmux.ini.sh'
+alias vdir='ls --color=auto --format=long';
+alias za="dict -d moby-thesaurus"
+# eval `dircolors`
+

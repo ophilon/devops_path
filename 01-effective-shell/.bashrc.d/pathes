@@ -1,0 +1,12 @@
+# The next line updates PATH for Yandex Cloud CLI.
+if [ -f '/home/ophil/yandex-cloud/path.bash.inc' ]; then source '/home/ophil/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/home/ophil/yandex-cloud/completion.bash.inc' ]; then source '/home/ophil/yandex-cloud/completion.bash.inc'; fi
+
+PATH="~/bin:~/.local/bin:~/.cargo/bin:/usr/sbin:$PATH"
+# export GEM_HOME="$HOME/gems"
+
+
+# The next line updates PATH for Yandex Cloud YDB CLI.
+if [ -f '/home/ophil/ydb/path.bash.inc' ]; then source '/home/ophil/ydb/path.bash.inc'; fi

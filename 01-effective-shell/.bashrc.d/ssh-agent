@@ -1,0 +1,3 @@
+eval $(ssh-agent -s) &>/dev/null
+ssh-add -q ~/.ssh/id_rsa 
+ssh-add -q ~/.ssh/id_ed25519
